@@ -5,8 +5,8 @@
 
   <div class="row">
     <div class="input-group input-group-lg col-md-12">
-      <input type="text">
-      <button>Search</button>
+      <input type="text" #newquery [value]='query' (keydown.enter)="submit(newquery.value)">
+      <button (click)="submit(newquery.value)">Search</button>
     </div>
   </div>
 
